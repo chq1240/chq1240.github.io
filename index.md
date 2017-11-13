@@ -1,16 +1,26 @@
 ## 黑化的留白君
 function result = ChanAlgorithm(BSN, X, Y, Radius, Noise)
+
 %BSN 为基站个数，3 < BSN <= 7；
+
 %MSP 为移动台的初始位置, MSx, MSy均为[0,1]之间的数；
+
 %特别要注意服务小区与MS之间的关系，MS的位置不能越界。
+
 %Noise 测距误差方差。
+
 %R 为小区半径，单位(meter)；
+
 %result 为移动台经算法处理后的位置.
+
 %See also: ChanAlgorithm.m
+
 %参数检查：
 
 MSP = [X,Y];
+
 % 算法开始：
+
 BS = Radius*NetworkTop(BSN);
 MS = Radius*MSP
 % 噪声功率：
